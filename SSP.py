@@ -21,7 +21,7 @@ FormData2={
 
 FormData3={
 "ctl00$cph_right$e_area": "广东省",
-"ctl00$cph_right$e_location": "广州市白云区",
+"ctl00$cph_right$e_location": "",
 "ctl00$cph_right$e_observation": "无下列情况",
 "ctl00$cph_right$e_health$0": "无不适",
 "ctl00$cph_right$e_temp": "36",

@@ -18,8 +18,8 @@ Head = {
     "Referer": "",
 }
 FormDict = {
-    "account": "",
-    "password": "",
+    "account": "",#学号
+    "password": "",#密码
     "rancode": None,
     "client_id": "",
     "response_type": "",
