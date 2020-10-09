@@ -37,7 +37,9 @@ def Login(Param):
 
     for i in kksk:
         ParamList=i.split('=')
-        FormDict[ParamList[0]]=ParamList[1]
+        
+        #client_id 后可能还有参数，比如实验室#/auth/redirect
+        FormDict[ParamList[0]]=ParamList[1][:32]
 
     
     #Param="https://sso.scnu.edu.cn/AccountService/openapi/login.html?response_type=code&redirect_url=https%3A%2F%2Fssp.scnu.edu.cn%2FLogBySso.aspx&client_id=79808d49dae212d7dcd12d7e0d25173b"
@@ -108,6 +110,7 @@ def Login(Param):
         print("Login success") 
 
     # return res4#登录成功后的request,code应该是302/303,继续请求Respond Heade中的location
-
     res5=s.get(res4.headers['Location'])#请求location
-    return s
+    #print(res4.headers['Location'])
+    #可能需要获取?code
+    return (s,res4.headers['Location'])
